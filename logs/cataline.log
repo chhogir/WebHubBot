@@ -1,0 +1,84 @@
+Fri, 13 Apr 2018 20:21:00 log.py[line:144] INFO Scrapy 1.4.0 started (bot: WebHub)
+Fri, 13 Apr 2018 20:21:00 log.py[line:147] INFO Overridden settings: {'NEWSPIDER_MODULE': 'WebHub.spiders', 'FEED_URI': u'./data/pornhub.json', 'CONCURRENT_REQUESTS': 20, 'SPIDER_MODULES': ['WebHub.spiders'], 'BOT_NAME': 'WebHub', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'DEPTH_PRIORITY': 1, 'FEED_FORMAT': 'JSON', 'REDIRECT_ENABLED': False, 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'DOWNLOAD_DELAY': 0.5}
+Fri, 13 Apr 2018 20:21:00 middleware.py[line:53] INFO Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+Fri, 13 Apr 2018 20:21:00 middleware.py[line:53] INFO Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'WebHub.middlewares.UserAgentMiddleware',
+ 'WebHub.middlewares.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+Fri, 13 Apr 2018 20:21:00 middleware.py[line:53] INFO Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+Fri, 13 Apr 2018 20:21:00 middleware.py[line:53] INFO Enabled item pipelines:
+['WebHub.pipelines.PornhubMongoDBPipeline']
+Fri, 13 Apr 2018 20:21:00 engine.py[line:256] INFO Spider opened
+Fri, 13 Apr 2018 20:21:00 logstats.py[line:48] INFO Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+Fri, 13 Apr 2018 20:21:00 telnet.py[line:60] DEBUG Telnet console listening on 127.0.0.1:6023
+Fri, 13 Apr 2018 20:21:02 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/> (referer: None)
+Fri, 13 Apr 2018 20:21:02 pornHubSpider.py[line:36] DEBUG request url:------>https://www.pornhub.com/
+Fri, 13 Apr 2018 20:21:02 pornHubSpider.py[line:48] DEBUG [u'/video?page=2']
+Fri, 13 Apr 2018 20:21:02 pornHubSpider.py[line:51] DEBUG  next page:---------->https://www.pornhub.com/video?page=2
+Fri, 13 Apr 2018 20:21:02 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/video?c=111> (referer: None)
+Fri, 13 Apr 2018 20:21:03 pornHubSpider.py[line:36] DEBUG request url:------>https://www.pornhub.com/video?c=111
+Fri, 13 Apr 2018 20:21:03 pornHubSpider.py[line:48] DEBUG [u'/video?c=111&page=2']
+Fri, 13 Apr 2018 20:21:03 pornHubSpider.py[line:51] DEBUG  next page:---------->https://www.pornhub.com/video?c=111&page=2
+Fri, 13 Apr 2018 20:21:03 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/video?o=ht> (referer: None)
+Fri, 13 Apr 2018 20:21:03 pornHubSpider.py[line:36] DEBUG request url:------>https://www.pornhub.com/video?o=ht
+Fri, 13 Apr 2018 20:21:03 dupefilters.py[line:70] DEBUG Filtered duplicate request: <GET https://www.pornhub.com/embed/ph5acbe62b84b39> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+Fri, 13 Apr 2018 20:21:03 pornHubSpider.py[line:48] DEBUG [u'/video?o=ht&page=2']
+Fri, 13 Apr 2018 20:21:03 pornHubSpider.py[line:51] DEBUG  next page:---------->https://www.pornhub.com/video?o=ht&page=2
+Fri, 13 Apr 2018 20:21:03 engine.py[line:238] DEBUG Crawled (404) <GET https://www.pornhub.com/video?o=103> (referer: None)
+Fri, 13 Apr 2018 20:21:03 httperror.py[line:55] INFO Ignoring response <404 https://www.pornhub.com/video?o=103>: HTTP status code is not handled or not allowed
+Fri, 13 Apr 2018 20:21:04 engine.py[line:238] DEBUG Crawled (404) <GET https://www.pornhub.com/video?o=1> (referer: None)
+Fri, 13 Apr 2018 20:21:04 httperror.py[line:55] INFO Ignoring response <404 https://www.pornhub.com/video?o=1>: HTTP status code is not handled or not allowed
+Fri, 13 Apr 2018 20:21:04 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/recommended> (referer: None)
+Fri, 13 Apr 2018 20:21:04 pornHubSpider.py[line:36] DEBUG request url:------>https://www.pornhub.com/recommended
+Fri, 13 Apr 2018 20:21:04 pornHubSpider.py[line:48] DEBUG [u'/recommended?page=2']
+Fri, 13 Apr 2018 20:21:04 pornHubSpider.py[line:51] DEBUG  next page:---------->https://www.pornhub.com/recommended?page=2
+Fri, 13 Apr 2018 20:21:05 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/video?o=mv> (referer: None)
+Fri, 13 Apr 2018 20:21:05 pornHubSpider.py[line:36] DEBUG request url:------>https://www.pornhub.com/video?o=mv
+Fri, 13 Apr 2018 20:21:05 pornHubSpider.py[line:48] DEBUG [u'/video?o=mv&page=2']
+Fri, 13 Apr 2018 20:21:05 pornHubSpider.py[line:51] DEBUG  next page:---------->https://www.pornhub.com/video?o=mv&page=2
+Fri, 13 Apr 2018 20:21:05 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/video?o=tr> (referer: None)
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:36] DEBUG request url:------>https://www.pornhub.com/video?o=tr
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:48] DEBUG [u'/video?o=tr&page=2']
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:51] DEBUG  next page:---------->https://www.pornhub.com/video?o=tr&page=2
+Fri, 13 Apr 2018 20:21:06 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/embed/ph5a982be5d73e9> (referer: https://www.pornhub.com/)
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:61] DEBUG PH信息的JSON:
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:62] DEBUG [u' {"disable_sharebar":0,"htmlPauseRoll":"false","htmlPostRoll":"false","embedCode":"<iframe src=\\"https:\\/\\/www.pornhub.com\\/embed\\/ph5a982be5d73e9\\" frameborder=\\"0\\" width=\\"560\\" height=\\"340\\" scrolling=\\"no\\" allowfullscreen><\\/iframe>","autoplay":0,"autoreplay":"false","hidePostPauseRoll":"false","video_unavailable":"false","pauseroll_url":"","postroll_url":"","video_duration":"836","actionTags":"","link_url":"https:\\/\\/www.pornhub.com\\/view_video.php?viewkey=ph5a982be5d73e9","related_url":"https:\\/\\/www.pornhub.com\\/video\\/player_related_datas?id=156475572","image_url":"https:\\/\\/ci.phncdn.com\\/videos\\/201803\\/01\\/156475572\\/original\\/(m=eaAaGwObaaaa)(mh=DvKHfVkLWDu8imXz)12.jpg","video_title":"Little Teen Jasmine Try BBC","defaultQuality":[720,480,240,1080],"vcServerUrl":"/svvt/add?stype=evv&svalue=156475572&snonce=w5hf2r5reha2jz4h&skey=9e8e02fdb97ce7f5e824006781b5aeae8abbd3cabdb721a5040485c8591c323c&stime=1523622065","quality_480p":"https:\\/\\/de.phncdn.com\\/videos\\/201803\\/01\\/156475572\\/480P_600K_156475572.mp4?ttl=1523625665&ri=1433600&rs=832&hash=9cc826ebe1ddf9d8e7ffaa2421bcacc3","mediaDefinitions":[{"defaultQuality":false,"format":"","quality":"480","videoUrl":"https:\\/\\/de.phncdn.com\\/videos\\/201803\\/01\\/156475572\\/480P_600K_156475572.mp4?ttl=1523625665&ri=1433600&rs=832&hash=9cc826ebe1ddf9d8e7ffaa2421bcacc3"}],"video_unavailable_country":"false","toprated_url":"https:\\/\\/www.pornhub.com\\/video?o=tr&t=m","mostviewed_url":"https:\\/\\/www.pornhub.com\\/video?o=mv&t=m","browser_url":"https:\\/\\/www.pornhub.com\\/","morefromthisuser_url":"\\/users\\/deadlywhisper\\/videos","options":"iframe","cdn":"highwinds","startLagThreshold":1000,"outBufferLagThreshold":2000,"appId":"1111","service":"","mp4_seek":"start","cdnProvider":"hw","hotspots":["10682262","185633","149146","116916","100507","91596","82335","75885","72035","69668","68854","65586","66832","67088","68648","69369","73214","75439","75259","77854","81871","86388","84156","82210","80930","77146","73704","70876","67766","61578","57223","54514","52280","50707","50915","47310","44867","51765","50814","61640","70145","79304","90652","100323","106210","109424","111185","108596","105408","104462","100373","99778","95023","95514","109685","96456","94351","91809","85651","85779","81775","79199","75025","77060","73635","65365","64917","59774","84052","57868","60205","61210","59636","58425","55741","56043","53973","49591","46532","43212","41586","44672","42996","43320","40857","40653","43150","46271","47049","48254","47409","44746","44980","42657","40478","38638","39073","40978","44206","52516","58427","63734","66136","66730","66080","63269","61924","62637","59499","55665","56132","55491","52580","52707","53942","54935","55576","52619","50717","49249","49019","48866","49175","53357","57140","55151","55054","50055","46601","47164","46424","44850","45743","43061","41654","39779","36398","35962","37081","36240","37711","53333","43364","47712","49583","51396","53019","59313","67367","78338","81843","75265","72898","69571","64771","52517","45883","41521","41047","41827","40536","37544","35024","34236","33763","31754","27867"],"thumbs":{"samplingFrequency":4,"type":"normal","cdnType":"regular","urlPattern":"https:\\/\\/ci.phncdn.com\\/videos\\/201803\\/01\\/156475572\\/timeline\\/120x90\\/(m=eyzaiCObaaaa)(mh=YjQsqFvvrD463Jbq)S{8}.jpg","thumbHeight":"90","thumbWidth":"120"},"nextVideo":[],"language":"en"}']
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:75] INFO duration:836 title:Little Teen Jasmine Try BBC image_url:https://ci.phncdn.com/videos/201803/01/156475572/original/(m=eaAaGwObaaaa)(mh=DvKHfVkLWDu8imXz)12.jpg link_url:https://www.pornhub.com/view_video.php?viewkey=ph5a982be5d73e9
+Fri, 13 Apr 2018 20:21:06 scraper.py[line:237] DEBUG Scraped from <200 https://www.pornhub.com/embed/ph5a982be5d73e9>
+{'image_url': u'https://ci.phncdn.com/videos/201803/01/156475572/original/(m=eaAaGwObaaaa)(mh=DvKHfVkLWDu8imXz)12.jpg',
+ 'link_url': u'https://www.pornhub.com/view_video.php?viewkey=ph5a982be5d73e9',
+ 'quality_480p': u'https://de.phncdn.com/videos/201803/01/156475572/480P_600K_156475572.mp4?ttl=1523625665&ri=1433600&rs=832&hash=9cc826ebe1ddf9d8e7ffaa2421bcacc3',
+ 'video_duration': u'836',
+ 'video_title': u'Little Teen Jasmine Try BBC'}
+Fri, 13 Apr 2018 20:21:06 engine.py[line:238] DEBUG Crawled (200) <GET https://www.pornhub.com/embed/ph5a5644b0c9f13> (referer: https://www.pornhub.com/)
+Fri, 13 Apr 2018 20:21:06 crawler.py[line:252] INFO Received SIGINT, shutting down gracefully. Send again to force 
+Fri, 13 Apr 2018 20:21:06 engine.py[line:295] INFO Closing spider (shutdown)
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:61] DEBUG PH信息的JSON:
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:62] DEBUG [u' {"disable_sharebar":0,"htmlPauseRoll":"false","htmlPostRoll":"false","embedCode":"<iframe src=\\"https:\\/\\/www.pornhub.com\\/embed\\/ph5a5644b0c9f13\\" frameborder=\\"0\\" width=\\"560\\" height=\\"340\\" scrolling=\\"no\\" allowfullscreen><\\/iframe>","autoplay":0,"autoreplay":"false","hidePostPauseRoll":"false","video_unavailable":"false","pauseroll_url":"","postroll_url":"","video_duration":"720","actionTags":"Blowjob:337,Missionary:436,Reverse Cowgirl:515","link_url":"https:\\/\\/www.pornhub.com\\/view_video.php?viewkey=ph5a5644b0c9f13","related_url":"https:\\/\\/www.pornhub.com\\/video\\/player_related_datas?id=149480702","image_url":"https:\\/\\/ci.phncdn.com\\/videos\\/201801\\/10\\/149480702\\/original\\/(m=eaAaGwObaaaa)(mh=07bSpv-05i9SHBzy)6.jpg","video_title":"BANGBROS - Young Teen Latina Maid Nicole Bexley Gets Down and Dirty","defaultQuality":[720,480,240,1080],"vcServerUrl":"/svvt/add?stype=evv&svalue=149480702&snonce=my7ez8u54quti6mq&skey=a9cc34127fccb5f912e732331e4daf545bc38fbf54fe0a5e492a09153986106d&stime=1523622066","quality_480p":"https:\\/\\/de.phncdn.com\\/videos\\/201801\\/10\\/149480702\\/480P_600K_149480702.mp4?ttl=1523625666&ri=1433600&rs=856&hash=fdb91fa141f48368957852c1f7c719b7","mediaDefinitions":[{"defaultQuality":false,"format":"","quality":"480","videoUrl":"https:\\/\\/de.phncdn.com\\/videos\\/201801\\/10\\/149480702\\/480P_600K_149480702.mp4?ttl=1523625666&ri=1433600&rs=856&hash=fdb91fa141f48368957852c1f7c719b7"}],"video_unavailable_country":"false","toprated_url":"https:\\/\\/www.pornhub.com\\/video?o=tr&t=m","mostviewed_url":"https:\\/\\/www.pornhub.com\\/video?o=mv&t=m","browser_url":"https:\\/\\/www.pornhub.com\\/","morefromthisuser_url":"\\/users\\/bangbros\\/videos","options":"iframe","cdn":"highwinds","startLagThreshold":1000,"outBufferLagThreshold":2000,"appId":"1111","service":"","mp4_seek":"start","cdnProvider":"hw","hotspots":["7508320","141039","98481","81300","73192","67301","61802","57839","54025","52628","59436","46447","43784","42060","40513","39091","39334","38464","40465","45390","48983","49136","46858","46005","43790","41878","39908","38396","36709","36027","36063","34391","35079","35444","35791","35430","36324","37636","38050","41134","47059","57443","64110","63591","60218","60018","58439","59031","57571","56643","53622","52314","51457","49246","47830","46112","43327","42635","45008","43626","44860","48396","52699","57737","66571","57767","57927","52725","46511","41614","39801","37761","35977","33481","32064","30514","28892","27749","26831","26092","25343","25247","25085","26171","30796","37976","52409","64368","65202","62422","58596","55730","53586","50523","50437","44884","42846","40686","38505","36335","34879","34912","35836","40833","38779","38479","35308","33793","32831","29861","28361","26538","25308","29972","22879","21970","20944","20202","19571","19822","20911","22521","23981","24441","24407","24379","30092","25893","24245","23356","22742","22596","23260","21927","21261","20908","20791","21064","21599","22374","24038","26627","28403","25040"],"thumbs":{"samplingFrequency":4,"type":"normal","cdnType":"regular","urlPattern":"https:\\/\\/ci.phncdn.com\\/videos\\/201801\\/10\\/149480702\\/timeline\\/120x90\\/(m=eyzaiCObaaaa)(mh=0dNt_h0VPM0LIa9t)S{7}.jpg","thumbHeight":"90","thumbWidth":"120"},"nextVideo":[],"language":"en"}']
+Fri, 13 Apr 2018 20:21:06 pornHubSpider.py[line:75] INFO duration:720 title:BANGBROS - Young Teen Latina Maid Nicole Bexley Gets Down and Dirty image_url:https://ci.phncdn.com/videos/201801/10/149480702/original/(m=eaAaGwObaaaa)(mh=07bSpv-05i9SHBzy)6.jpg link_url:https://www.pornhub.com/view_video.php?viewkey=ph5a5644b0c9f13
+Fri, 13 Apr 2018 20:21:06 scraper.py[line:237] DEBUG Scraped from <200 https://www.pornhub.com/embed/ph5a5644b0c9f13>
+{'image_url': u'https://ci.phncdn.com/videos/201801/10/149480702/original/(m=eaAaGwObaaaa)(mh=07bSpv-05i9SHBzy)6.jpg',
+ 'link_url': u'https://www.pornhub.com/view_video.php?viewkey=ph5a5644b0c9f13',
+ 'quality_480p': u'https://de.phncdn.com/videos/201801/10/149480702/480P_600K_149480702.mp4?ttl=1523625666&ri=1433600&rs=856&hash=fdb91fa141f48368957852c1f7c719b7',
+ 'video_duration': u'720',
+ 'video_title': u'BANGBROS - Young Teen Latina Maid Nicole Bexley Gets Down and Dirty'}
+Fri, 13 Apr 2018 20:21:07 crawler.py[line:259] INFO Received SIGINT twice, forcing unclean shutdown

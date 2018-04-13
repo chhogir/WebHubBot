@@ -14,17 +14,17 @@ BOT_NAME = 'WebHub'
 SPIDER_MODULES = ['WebHub.spiders']
 NEWSPIDER_MODULE = 'WebHub.spiders'
 
-DOWNLOAD_DELAY = 1  # 间隔时间
+DOWNLOAD_DELAY = 0.5  # 间隔时间
 # LOG_LEVEL = 'INFO'  # 日志级别
 CONCURRENT_REQUESTS = 20  # 默认为16
 # CONCURRENT_ITEMS = 1
 # CONCURRENT_REQUESTS_PER_IP = 1
 REDIRECT_ENABLED = False
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'pornhub (+http://www.yourdomain.com)'
+# USER_AGENT = 'pornhub (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 DOWNLOADER_MIDDLEWARES = {
     "WebHub.middlewares.UserAgentMiddleware": 401,
@@ -34,8 +34,8 @@ ITEM_PIPELINES = {
     "WebHub.pipelines.PornhubMongoDBPipeline": 403,
 }
 
-FEED_URI=u'./data/pornhub.json'
-FEED_FORMAT='JSON'
+FEED_URI = u'./data/pornhub.json'
+FEED_FORMAT = 'JSON'
 
 DEPTH_PRIORITY = 1
 SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
