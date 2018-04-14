@@ -3,14 +3,14 @@
 PH_TYPES = [
     '',
     'recommended',
-    'video?o=ht', # hot
-    'video?o=mv', # Most Viewed
-    'video?o=tr', # Top Rate
+    # 'video?o=ht', # hot
+    # 'video?o=mv', # Most Viewed
+    # 'video?o=tr', # Top Rate
 
     # Examples of certain categories
     # 'video?c=1',  # Category = Asian
     # 'video?c=111',  # Category = Japanese
-    'video?o=103', # Korean
+    'video?c=1', # Asian
+    'video?c=103', # Korean
     'video?c=111', # Japanese
-    'video?o=1', # Asian
 ]

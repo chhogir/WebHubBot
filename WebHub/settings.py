@@ -23,6 +23,14 @@ REDIRECT_ENABLED = False
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'pornhub (+http://www.yourdomain.com)'
 
+# 请求超时
+DOWNLOAD_TIMEOUT = 5
+# 重新请求
+RETRY_ENABLED = True
+# 重试次数
+RETRY_TIMES = 3
+
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
@@ -34,7 +42,7 @@ ITEM_PIPELINES = {
     "WebHub.pipelines.PornhubMongoDBPipeline": 403,
 }
 
-FEED_URI = u'./data/pornhub.json'
+FEED_URI = u'../data/pornhub.json'
 FEED_FORMAT = 'JSON'
 
 DEPTH_PRIORITY = 1

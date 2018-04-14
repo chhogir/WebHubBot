@@ -22,7 +22,7 @@ class Spider(CrawlSpider):
             format=
             '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
             datefmt='%a, %d %b %Y %H:%M:%S',
-            filename='./logs/cataline.log',
+            filename='../logs/cataline.log',
             filemode='w')
 
     # test = True
