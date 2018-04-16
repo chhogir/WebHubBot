@@ -9,21 +9,22 @@ from scrapy.http import Request
 import re
 import json
 import random
+import time
 
 
 class Spider(CrawlSpider):
     name = 'pornHubSpider'
     host = 'https://www.pornhub.com'
     start_urls = list(set(PH_TYPES))
-    logging.getLogger("requests").setLevel(logging.WARNING)  # 将requests的日志级别设成WARNING
+    logging.getLogger("requests").setLevel(
+        logging.WARNING)  # 将requests的日志级别设成WARNING
 
     logging.basicConfig(
-            level=logging.DEBUG,
-            format=
-            '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-            datefmt='%a, %d %b %Y %H:%M:%S',
-            filename='../logs/cataline.log',
-            filemode='w')
+        level=logging.DEBUG,
+        format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+        datefmt='%a, %d %b %Y %H:%M:%S',
+        filename='../logs/cataline.log',
+        filemode='w')
 
     # test = True
     def start_requests(self):
@@ -44,7 +45,7 @@ class Spider(CrawlSpider):
             yield Request(url='https://www.pornhub.com/embed/%s' % viewkey[0],
                           callback=self.parse_ph_info)
         url_next = selector.xpath(
-                '//a[@class="orangeButton" and text()="Next "]/@href').extract()
+            '//a[@class="orangeButton" and text()="Next "]/@href').extract()
         logging.debug(url_next)
         if url_next:
             # if self.test:
@@ -71,6 +72,11 @@ class Spider(CrawlSpider):
         phItem['link_url'] = link_url
         quality_480p = _ph_info_json.get('quality_480p')
         phItem['quality_480p'] = quality_480p
+        crwal_time = time.strftime(
+            '%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+        phItem['crwal_time'] = crwal_time
+
         logging.info('duration:' + duration + ' title:' + title + ' image_url:'
-                     + image_url + ' link_url:' + link_url)
+                     + image_url + ' link_url:' + link_url + ' crwal_time:' + crwal_time)
+
         yield phItem

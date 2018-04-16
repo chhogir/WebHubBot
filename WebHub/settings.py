@@ -29,7 +29,11 @@ DOWNLOAD_TIMEOUT = 5
 RETRY_ENABLED = True
 # 重试次数
 RETRY_TIMES = 3
+# 使 response 解析相应的请求错误码页面
+# HTTPERROR_ALLOWED_CODES = [429]
 
+# 忽视错误码，重新请求
+RETRY_HTTP_CODES = [500, 503, 504, 400, 408, 429] 
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
